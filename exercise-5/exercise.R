@@ -31,10 +31,10 @@ largest.grant <- max(spending)
 smallest.grant <- min(spending)
 
 # Which organization received the largest grant?
-org.largest <- grants[grants$total_amount == largest.grant, "organization"]
+org.largest <- org[spending == largest.grant]
 
 # Which organization received the smallest grant?
-org.smallest <- grants[grants$total_amount == smallest.grant, "organization"]
+org.smallest <- org[spending == smallest.grant]
 
 # How many grants were awarded in 2010?
 grants.awarded <- grants[grants$start_year == 2010, "start_year"]
